@@ -15,13 +15,5 @@ public class Main {
 //        joe.retire();
 //        System.out.println("Joe's Pension check = $ " + joe.collectPay());
 
-
-        Car car = new Car("2023 Black Lamborgini 3");
-        runRace(car);
-    }
-
-    private static void runRace(Car car) {
-        car.startEngine();
-        car.drive();
     }
 }
