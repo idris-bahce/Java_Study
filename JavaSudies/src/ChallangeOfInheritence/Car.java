@@ -1,20 +1,42 @@
 package ChallangeOfInheritence;
 
 public class Car {
-    private String description;
+    private boolean engine;
+    private int cylinders;
+    private String name;
+    private int wheels;
 
-    public Car(String description) {
-        this.description = description;
+    public Car(int cylinders, String name) {
+        this.cylinders = cylinders;
+        this.name = name;
+        this.engine = true;
+        this.wheels = 4;
+    }
+
+    public int getCylinders() {
+        return cylinders;
+    }
+
+    public void setCylinders(int cylinders) {
+        this.cylinders = cylinders;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void startEngine(){
-        System.out.println("Car -> startEngine");
+        System.out.println("Car engine is starting");
     }
-    public void drive(){
-        System.out.println("Car -> driving, type is " + getClass().getSimpleName());
-        runEngine();
+    public void accelerate(){
+        System.out.println("Car is accelerating");
     }
-    protected void runEngine(){
-        System.out.println("Car -> runEngine");
+    public void brake(){
+        System.out.println("Car is braking");
     }
+
 }
